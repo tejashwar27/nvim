@@ -1,18 +1,13 @@
 require('telescope').setup {
-    defaults = {
-        layout_strategy = 'horizontal',
+    defaults = require('telescope.themes').get_dropdown {
+        preview = false,
         layout_config = {
-            height = 0.8,
-            width = 0.9,
-            preview_width = 0.6,
-        },
-        preview = {
-            hide_on_startup = true,
+            height = 0.7,
+            width = 0.8,
         },
         mappings = {
             i = {
                 ['<esc>'] = require('telescope.actions').close,
-                ['<C-y>'] = require('telescope.actions.layout').toggle_preview,
             },
         },
     },
@@ -26,10 +21,9 @@ vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc =
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>/', function()
     -- You can pass additional configuration to telescope to change theme, layout, etc.
-    require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-        winblend = 10,
-        previewer = false,
-    })
+    require('telescope.builtin').current_buffer_fuzzy_find {
+        -- winblend = 10,
+    }
 end, { desc = '[/] Fuzzily search in current buffer]' })
 
 vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })

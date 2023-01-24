@@ -25,18 +25,12 @@ vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true, desc =
 vim.keymap.set('n', 'Q', '<nop>', { desc = 'Disable Q command'})
 
 -- Clear highlights
-vim.keymap.set('n', '<Esc><Esc>', '<cmd>nohl<CR>', { desc = 'Remove highlights'})
+-- vim.keymap.set({ 'n', 'i' }, '<Esc><Esc>', ':nohl<CR>', { desc = 'Remove highlights'})
 
 -- Commandline mode movement
 vim.keymap.set('c', '<C-F>', '<Right>', { desc = 'move [F]orward' })
 vim.keymap.set('c', '<C-B>', '<Left>', { desc = 'move [B]ackward' })
 
 -- Buffer navigation
-vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = '[B]uffer [N]ext' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = '[B]uffer [P]revious' })
-
--- Tabe navigation
-vim.keymap.set('n', '<leader>tr', '<cmd>tabr<CR>', { desc = 'Tabe Right' })
-vim.keymap.set('n', '<leader>tl', '<cmd>tabl<CR>', { desc = 'Tabe Left' })
-vim.keymap.set('n', '<leader>tp', '<cmd>tabp<CR>', { desc = 'Tabe Previous' })
-vim.keymap.set('n', '<leader>tn', '<cmd>tabn<CR>', { desc = 'Tabe Next' })
+vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = '[B]uffer [N]ext' })

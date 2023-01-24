@@ -37,9 +37,7 @@ return require('packer').startup({function(use)
         },
         -- tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
-
-    --TEJ
-    use 'lervag/vimtex'
+    use 'folke/which-key.nvim'
 
     -- Eyecandy
     use {
@@ -56,8 +54,9 @@ return require('packer').startup({function(use)
         'rose-pine/neovim',
         as = 'rose-pine',
     }
-    use 'rebelot/kanagawa.nvim'
-
+    use { 'catppuccin/nvim', as = 'catppuccin' }
+    use { 'ellisonleao/gruvbox.nvim' }
+    use 'JoosepAlviste/palenightfall.nvim'
 
     -- LSP,completion plugins
     use 'numToStr/Comment.nvim'
@@ -97,6 +96,7 @@ return require('packer').startup({function(use)
     use { 'nvim-telescope/telescope.nvim' }
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
+    -- Note taking
 
     if packer_bootstrap then
         require('packer').sync()
