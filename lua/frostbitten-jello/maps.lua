@@ -34,9 +34,3 @@ vim.keymap.set('c', '<C-B>', '<Left>', { desc = 'move [B]ackward' })
 -- Buffer navigation
 vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = '[B]uffer [P]revious' })
 vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = '[B]uffer [N]ext' })
-
--- Tabe navigation
--- vim.keymap.set('n', '<leader>tr', '<cmd>tabr<CR>', {desc = 'Tabe Right'})
--- vim.keymap.set('n', '<leader>tl', '<cmd>tabl<CR>', {desc = 'Tabe Left'})
--- vim.keymap.set('n', '<leader>tp', '<cmd>tabp<CR>', {desc = 'Tabe Previous'})
--- vim.keymap.set('n', '<leader>tn', '<cmd>tabn<CR>', {desc = 'Tabe Next'})
