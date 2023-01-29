@@ -1,10 +1,10 @@
 require('telescope').setup {
-    defaults = require('telescope.themes').get_ivy{
+    defaults = {
     --defaults = {
         preview = true,
         layout_config = {
             height = 0.6,
-            width = 0.97,
+            width = 0.94,
             preview_width = 0.6,
         },
         mappings = {
