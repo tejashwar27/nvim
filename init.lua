@@ -1,7 +1,6 @@
 require 'frostbitten-jello.options'
 require 'frostbitten-jello.maps'
 require 'frostbitten-jello.plugins'
-require 'frostbitten-jello.filetype'
 require 'frostbitten-jello.colorschemes'
 require 'frostbitten-jello.treesitter'
 require 'frostbitten-jello.nvim-tree'

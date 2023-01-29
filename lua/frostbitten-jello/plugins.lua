@@ -19,12 +19,21 @@ vim.cmd([[
     augroup end
 ]])
 
+-- #TEJ
+-- Set ChampSim replacement and prefetch files as cpp
+vim.cmd([[
+    augroup repl_pref_ft
+        autocmd!
+        autocmd BufNewFile,BufRead *_repl   set ft=cpp
+        autocmd BufNewFile,BufRead *_pref   set ft=cpp
+    augroup END
+]])
+
 return require('packer').startup({function(use)
 
     -- Basic plugins
     use 'wbthomason/packer.nvim'
     use 'nvim-lua/plenary.nvim'
-    use 'nathom/filetype.nvim'
 
     -- UI plugins
     use 'j-hui/fidget.nvim'
