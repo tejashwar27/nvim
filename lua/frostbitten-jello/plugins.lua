@@ -24,6 +24,7 @@ return require('packer').startup({function(use)
     -- Basic plugins
     use 'wbthomason/packer.nvim'
     use 'nvim-lua/plenary.nvim'
+    use 'nathom/filetype.nvim'
 
     -- UI plugins
     use 'j-hui/fidget.nvim'
