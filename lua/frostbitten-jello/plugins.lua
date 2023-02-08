@@ -25,6 +25,7 @@ vim.cmd([[
     augroup repl_pref_ft
         autocmd!
         autocmd BufNewFile,BufRead *_repl   set ft=cpp
+        autocmd BufNewFile,BufRead *_bpred  set ft=cpp
         autocmd BufNewFile,BufRead *_pref   set ft=cpp
     augroup END
 ]])
