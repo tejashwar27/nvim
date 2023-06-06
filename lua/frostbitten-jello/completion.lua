@@ -52,12 +52,12 @@ local servers = {
     -- tsserver = {},
 
     rust_analyzer = {},
-    sumneko_lua = {
-        Lua = {
-            workspace = { checkThirdParty = false },
-            telemetry = { enable = false },
-        },
-    },
+    -- sumneko_lua = {
+    --     Lua = {
+    --         workspace = { checkThirdParty = false },
+    --         telemetry = { enable = false },
+    --     },
+    -- },
 }
 
 -- Setup neovim lua configuration
