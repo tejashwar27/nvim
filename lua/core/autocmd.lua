@@ -26,8 +26,14 @@ vim.api.nvim_create_autocmd('CmdlineLeave', {
 })
 
 vim.api.nvim_create_autocmd({'BufEnter', 'BufRead', 'BufNewFile'}, {
-  pattern = {'*_repl', '*_pref', '*bpred'},
+  pattern = {'*_repl','*_pref','*bpred'},
   callback = function()
     vim.o.filetype = 'cpp'
   end,
 })
+-- vim.api.nvim_create_autocmd('BufEnter', {
+--   pattern = '*_repl',
+--   callback = function()
+--     vim.o.filetype = 'cpp'
+--   end,
+-- })

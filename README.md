@@ -1,2 +1,2 @@
 # nvim
-Neovim lua configuration
+My neovim config
