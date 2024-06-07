@@ -20,6 +20,7 @@ vim.opt.smartindent = true
 vim.opt.wrap = true
 
 vim.opt.swapfile = false
+vim.opt.undofile = true
 vim.opt.backup = false
 
 vim.opt.hlsearch = true

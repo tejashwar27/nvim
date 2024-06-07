@@ -10,7 +10,7 @@ return {
     {'folke/neodev.nvim', lazy = true},
 
     -- Completion
-    {'hrsh7th/nvim-cmp', lazy = true},
+    {'hrsh7th/nvim-cmp', lazy = true, event = "InsertEnter"},
 
     {'hrsh7th/cmp-nvim-lsp', lazy = true},
     {'hrsh7th/cmp-buffer', lazy = true},
@@ -18,7 +18,8 @@ return {
     {'hrsh7th/cmp-cmdline', lazy = true},
     {'hrsh7th/cmp-nvim-lua', lazy = true},
     {'L3MON4D3/LuaSnip', lazy = true},
-    {'saadparwaiz1/cmp_luasnip', lazy = true}
+    {'saadparwaiz1/cmp_luasnip', lazy = true},
+    {'SmiteshP/nvim-navic'},
   },
   config = function()
     -- LSP settings.
@@ -51,7 +52,7 @@ return {
 
       -- Lesser used LSP functionality
       vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = '[G]oto [D]eclaration' })
-      vim.keymap.sfet('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, { desc = '[W]orkspace [A]dd Folder' })
+      vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, { desc = '[W]orkspace [A]dd Folder' })
       vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder,
         { desc = '[W]orkspace [R]emove Folder' })
 
