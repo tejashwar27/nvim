@@ -26,13 +26,20 @@ vim.api.nvim_create_autocmd('CmdlineLeave', {
 })
 
 vim.api.nvim_create_autocmd("User", {
-    pattern = "AlphaReady",
-    command = "set laststatus=0"
+  pattern = "AlphaReady",
+  command = "set laststatus=0"
 })
 
 vim.api.nvim_create_autocmd("User", {
-    pattern = "AlphaClosed",
-    command = "set laststatus=2",
+  pattern = "AlphaClosed",
+  command = "set laststatus=2",
+})
+
+vim.api.nvim_create_autocmd('bufWrite', {
+  pattern = '*',
+  callback = function()
+    vim.lsp.buf.format()
+  end,
 })
 
 vim.api.nvim_create_autocmd({'BufEnter', 'BufRead', 'BufNewFile'}, {

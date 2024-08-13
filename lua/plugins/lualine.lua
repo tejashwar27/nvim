@@ -1,6 +1,5 @@
 return {
   'nvim-lualine/lualine.nvim',
-  event = 'BufReadPost',
   dependencies = {
     'nvim-tree/nvim-web-devicons', opt = true
   },
@@ -20,10 +19,44 @@ return {
             right_padding = 1,
           },
         },
-        lualine_b = { 'filename' },
-        lualine_c = { 'branch' },
-        lualine_x = { 'filetype' },
-        lualine_y = { 'progress' },
+        lualine_b = {
+          'branch',
+        },
+        lualine_c = { {
+          'buffers',
+          show_filename_only = true,
+          hide_filename_extension = true,
+          show_modified_status = true,
+          mode = '1',
+
+          filetype_names = {
+            TelescopePrompt = 'Telescope',
+            dashboard = 'Dashboard',
+            packer = 'Packer',
+            fzf = 'FZF',
+            alpha = 'Alpha'
+          }, -- Shows specific buffer name for that filetype ( { `filetype` = `buffer_name`, ... } )
+
+          -- Automatically updates active buffer color to match color of other components (will be overidden if buffers_color is set)
+          use_mode_colors = true,
+
+          buffers_color = {
+            -- Same values as the general color option can be used here.
+
+            -- inactive = 'lualine_{section}_inactive', -- Color for inactive buffer.
+          },
+          symbols = {
+            modified = ' ●', -- Text to show when the buffer is modified
+            alternate_file = '#', -- Text to show to identify the alternate file
+            directory = '', -- Text to show when the buffer is a directory
+          },
+        }
+        },
+        lualine_x = { {
+
+        }
+        },
+        lualine_y = { 'filetype' },
         lualine_z = {
           { 'location', separator = { right = '' }, left_padding = 2 },
         },
