@@ -65,7 +65,7 @@ local function ensure_centered()
 end
 
 -- Create the autocommand
-vim.api.nvim_create_autocmd("CursorMoved", {
+vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
   pattern = "*",
   callback = ensure_centered,
 })
